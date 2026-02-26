@@ -1,85 +1,88 @@
 ---
-import Base from '../layouts/Base.astro';
+import AnagLayout from '../layouts/AnagLayout.astro';
 ---
 
-<Base title="ANAG">
-  <article>
-    <p class="breadcrumb"><a href="/">CycleTree</a> / ANAG</p>
-    
-    <h1>ANAG</h1>
-    
-    <p class="tagline">Anti-aging — 研究・探究を担う組織</p>
-    
-    <h2>概要</h2>
+<AnagLayout 
+    title="ANAG Overview"
+    itemNumber="ANAG-001"
+    objectClass="THAUMIEL"
+    clearanceLevel={4}
+>
+    <h2>Special Containment Procedures</h2>
     <p>
-      ANAGは「Anti-aging」を語源とする研究組織である。
-      老化を防ぎ、不老不死またはそれと同等以上の成果を得ることを根本的な目的として設立された。
-    </p>
-    <p>
-      寿命の問題の解決は、世界の真理を探究するための手段であり、ANAGはその最初の一歩として始まった。
+        ANAG Foundation operates as a decentralized research collective focused on 
+        <strong>anti-aging</strong> and <strong>mortality transcendence</strong> research.
+        All personnel must maintain Level 3+ clearance for database access.
     </p>
     
-    <h2>理念</h2>
-    <ul>
-      <li>世界の真理を探究し続けること</li>
-      <li>幸せな社会を実現させること</li>
-    </ul>
-    <p>
-      知的探求心が原動力であり理念である。
-      個人の力ではどうにもならないことを組織の力を使って実現する。
-    </p>
-    
-    <h2>取り組み</h2>
-    <p>
-      ANAGは医療IT分野の活動が主となる。不老不死の方法を機械を用いて研究する。
-    </p>
-    <p>
-      別の面では、学問的な基礎研究も行う。時空に関する研究で時間的・空間的制約を取り除く研究を行っている。
-    </p>
-    <p>
-      世界の仕組みを知るには世界を作れるようにならねばならない。
-    </p>
-    
-    <h2>分野</h2>
-    <ul>
-      <li>生命 — 医療・生命科学研究</li>
-      <li>工業 — 技術開発</li>
-      <li>探求 — 基礎研究・学術活動</li>
-    </ul>
-    
-    <h2>組織としてのゴール</h2>
-    <p>
-      成長しきり、何者にも負けない力を持ったとき、ANAGは世界を研究するためのものにすべてを捧げる。それがこの組織体としてのゴールである。
-    </p>
-    
-    <h2>関連組織</h2>
-    <ul>
-      <li><a href="/refixa">Refixa (RF)</a> — ANAGが理論/アカデミアなら、RFは実践/ビジネス。両者は独立しつつ協力関係にある。</li>
-    </ul>
-    
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>電離圏研究</strong> — 地震準備過程と電子密度遷移の研究</li>
-      <li><strong>EPS</strong> — Earthquake Prediction System</li>
-    </ul>
-  </article>
-</Base>
+    <div class="warning-box">
+        <strong>NOTICE:</strong> Research findings are classified. 
+        Unauthorized disclosure will result in immediate termination of access privileges.
+    </div>
 
-<style>
-  .breadcrumb {
-    font-size: 14px;
-    color: var(--text-dim);
-    margin-bottom: 16px;
-  }
-  
-  .breadcrumb a {
-    color: var(--text-dim);
-  }
-  
-  .tagline {
-    color: var(--text-dim);
-    font-size: 18px;
-    margin-top: -16px;
-    margin-bottom: 32px;
-  }
-</style>
+    <h2>Description</h2>
+    <p>
+        ANAGは「Anti-aging」を語源とする研究組織である。
+        不老不死を目指す——そう聞くと馬鹿げて聞こえるかもしれない。
+    </p>
+    <p>
+        しかし本当の理由はもっと単純で、もっと切実だ。
+    </p>
+    <blockquote>
+        大切な人が死ぬのが怖い。自分が死ぬのが怖い。<br>
+        だから、不老不死を夢見た。
+    </blockquote>
+    <p>
+        探究心に身を任せて、それこそが幸せであると定義付けしようとした。
+        死への恐怖を、知への渇望に変換する試み。
+    </p>
+
+    <h2>Mission Objectives</h2>
+    <ul>
+        <li><strong>Primary:</strong> 死の克服に関する基礎研究</li>
+        <li><strong>Secondary:</strong> 電離圏電子密度の遷移研究</li>
+        <li><strong>Tertiary:</strong> EPS (Earthquake Prediction System) 開発</li>
+    </ul>
+
+    <h2>Research Areas</h2>
+    <h3>Project EPS</h3>
+    <p>
+        地震準備過程は観測可能な物理的・統計的痕跡を残すか。
+        電離圏の異常と地震発生の相関を研究する。
+    </p>
+    <p>
+        南海トラフ大震災の前兆を捉えることが当面の目標。
+        <span class="redacted">████████</span>の被害を最小限にするため。
+    </p>
+
+    <h3>Longevity Research</h3>
+    <p>
+        詳細は Level 5 クリアランス保持者のみアクセス可能。
+    </p>
+    <p>
+        現在のステータス: <span class="redacted">██████████</span>
+    </p>
+
+    <h2>Organizational Structure</h2>
+    <div class="info-box">
+        <p><strong>Parent Organization:</strong> CycleTree</p>
+        <p><strong>Sister Organization:</strong> <a href="/refixa">Refixa (RF)</a> — 実践・工学部門</p>
+        <p><strong>Relationship:</strong> 協力関係（価値観の矛盾により独立）</p>
+    </div>
+
+    <h2>Personnel</h2>
+    <ul>
+        <li><strong>nix/pm-1</strong> — Project Manager</li>
+        <li><strong>angis</strong> — Research Lead</li>
+        <li><strong>pi</strong> — Principal Investigator</li>
+        <li><strong>data-eng</strong> — Data Engineering</li>
+        <li><strong>impl</strong> — Implementation</li>
+        <li><strong>valid</strong> — Validation</li>
+    </ul>
+
+    <h2>Addendum ANAG-001-A</h2>
+    <blockquote>
+        「自分の物語に没入するのが楽しい。妄想で終わるはずが、今は現実に向けて動いてる」<br>
+        — Founder, <span class="redacted">████</span>
+    </blockquote>
+</AnagLayout>

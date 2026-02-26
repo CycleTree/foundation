@@ -177,11 +177,8 @@ const navigation = [
         letter-spacing: 3px;
         text-transform: uppercase;
         margin: 40px 0 16px;
-        padding: 12px 0 8px;
+        padding: 20px 0 8px;
         border-bottom: 1px solid var(--border);
-        display: flex;
-        align-items: center;
-        gap: 12px;
         position: relative;
     }
 
@@ -190,29 +187,11 @@ const navigation = [
         position: absolute;
         top: 0;
         left: 0;
-        width: 120px;
-        height: 2px;
-        background: linear-gradient(
-            90deg,
-            var(--accent) 0%,
-            var(--accent) 30%,
-            transparent 30%,
-            transparent 40%,
-            var(--accent) 40%,
-            var(--accent) 60%,
-            transparent 60%
-        );
-    }
-
-    h2::after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 30%;
-        width: 6px;
-        height: 6px;
-        background: var(--accent);
-        border-radius: 50%;
+        width: 200px;
+        height: 16px;
+        background-image: url('/circuit-small.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     h3 {
@@ -273,55 +252,12 @@ const navigation = [
 
     /* Circuit Line */
     .circuit-line {
-        height: 4px;
+        height: 40px;
         background: var(--bg-darkest);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .circuit-line::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(
-            90deg,
-            transparent 0%,
-            var(--accent) 5%,
-            var(--accent) 15%,
-            transparent 15%,
-            transparent 20%,
-            var(--accent) 20%,
-            var(--accent) 35%,
-            transparent 35%,
-            transparent 50%,
-            var(--accent) 50%,
-            var(--accent) 52%,
-            transparent 52%,
-            transparent 70%,
-            var(--accent) 70%,
-            var(--accent) 85%,
-            transparent 85%
-        );
-        transform: translateY(-50%);
-    }
-
-    .circuit-line::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 6px;
-        height: 6px;
-        background: var(--accent);
-        border-radius: 50%;
-        left: 15%;
-        box-shadow: 
-            calc(35vw - 15vw) 0 0 var(--accent),
-            calc(52vw - 15vw) 0 0 3px var(--accent),
-            calc(85vw - 15vw) 0 0 var(--accent);
+        background-image: url('/circuit-line.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
     }
 
     /* 構造線 - 左 */

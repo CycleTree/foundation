@@ -5,156 +5,54 @@ import AnagInstitutionalLayout from '../layouts/AnagInstitutionalLayout.astro';
 <AnagInstitutionalLayout title="研究プロジェクト" section="研究活動">
     <section class="intro">
         <p class="lead">
-            現在進行中の研究プロジェクト一覧。各プロジェクトは危険度と進捗状況により分類される。
+            現在進行中の研究プロジェクト一覧。
         </p>
     </section>
 
-    <!-- Classification Legend -->
-    <div class="classification-legend">
-        <div class="legend-title">DANGER CLASSIFICATION</div>
-        <div class="legend-items">
-            <div class="legend-item zayin"><span class="level-mark">Z</span> ZAYIN — 安全</div>
-            <div class="legend-item teth"><span class="level-mark">T</span> TETH — 注意</div>
-            <div class="legend-item he"><span class="level-mark">H</span> HE — 警戒</div>
-            <div class="legend-item waw"><span class="level-mark">W</span> WAW — 危険</div>
-            <div class="legend-item aleph"><span class="level-mark">A</span> ALEPH — 最高危険</div>
-        </div>
-    </div>
-
     <h2>Active Projects</h2>
 
-    <!-- Project Cards -->
-    <div class="project-grid">
-        <!-- EPS -->
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-level he">H</div>
-                <div class="project-id">ANAG-P-001</div>
-            </div>
-            <div class="project-name">Project EPS</div>
-            <div class="project-subtitle">Earthquake Prediction System</div>
-            <div class="project-desc">
-                地震準備過程の観測可能な物理的・統計的痕跡の研究。電離圏電子密度の遷移を分析。
-            </div>
-            <div class="project-stats">
-                <div class="stat-item">
-                    <div class="stat-label">PROGRESS</div>
-                    <div class="stat-bar">
-                        <div class="stat-fill" style="width: 42%"></div>
-                    </div>
-                    <div class="stat-value">42%</div>
+    <div class="project-list">
+        <div class="project-item">
+            <div class="project-code">ANAG-P-001</div>
+            <div class="project-main">
+                <div class="project-name">Project EPS</div>
+                <div class="project-subtitle">Earthquake Prediction System</div>
+                <div class="project-desc">
+                    地震準備過程の観測可能な物理的・統計的痕跡の研究。電離圏電子密度の遷移を分析。
                 </div>
-                <div class="stat-item">
-                    <div class="stat-label">PRIORITY</div>
-                    <div class="stat-value priority-high">HIGH</div>
-                </div>
-            </div>
-            <div class="project-footer">
-                <span class="project-status active">● ACTIVE</span>
-                <span class="project-agents">3 agents assigned</span>
             </div>
         </div>
 
-        <!-- Ionosphere -->
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-level teth">T</div>
-                <div class="project-id">ANAG-P-002</div>
-            </div>
-            <div class="project-name">電離圏観測</div>
-            <div class="project-subtitle">Ionospheric Monitoring</div>
-            <div class="project-desc">
-                電離圏電子密度の連続観測とデータ収集。異常検知アルゴリズムの開発。
-            </div>
-            <div class="project-stats">
-                <div class="stat-item">
-                    <div class="stat-label">PROGRESS</div>
-                    <div class="stat-bar">
-                        <div class="stat-fill" style="width: 78%"></div>
-                    </div>
-                    <div class="stat-value">78%</div>
+        <div class="project-item">
+            <div class="project-code">ANAG-P-002</div>
+            <div class="project-main">
+                <div class="project-name">電離圏観測</div>
+                <div class="project-subtitle">Ionospheric Monitoring</div>
+                <div class="project-desc">
+                    電離圏電子密度の連続観測とデータ収集。異常検知アルゴリズムの開発。
                 </div>
-                <div class="stat-item">
-                    <div class="stat-label">PRIORITY</div>
-                    <div class="stat-value priority-mid">MEDIUM</div>
-                </div>
-            </div>
-            <div class="project-footer">
-                <span class="project-status active">● ACTIVE</span>
-                <span class="project-agents">2 agents assigned</span>
             </div>
         </div>
 
-        <!-- Longevity -->
-        <div class="project-card classified">
-            <div class="project-header">
-                <div class="project-level aleph">A</div>
-                <div class="project-id">ANAG-P-000</div>
-            </div>
-            <div class="project-name">長寿研究</div>
-            <div class="project-subtitle">Longevity Research</div>
-            <div class="project-desc">
-                <span class="redacted">████████████████████████</span>
-                <span class="redacted">██████████████</span>
-            </div>
-            <div class="project-stats">
-                <div class="stat-item">
-                    <div class="stat-label">PROGRESS</div>
-                    <div class="stat-bar classified-bar">
-                        <div class="stat-fill" style="width: 100%"></div>
-                    </div>
-                    <div class="stat-value">CLASSIFIED</div>
+        <div class="project-item">
+            <div class="project-code">ANAG-P-003</div>
+            <div class="project-main">
+                <div class="project-name">データ基盤</div>
+                <div class="project-subtitle">Data Infrastructure</div>
+                <div class="project-desc">
+                    研究データの収集・保存・分析基盤の構築と運用。
                 </div>
-                <div class="stat-item">
-                    <div class="stat-label">PRIORITY</div>
-                    <div class="stat-value priority-critical">CRITICAL</div>
-                </div>
-            </div>
-            <div class="project-footer">
-                <span class="project-status classified-status">● LEVEL 5 ONLY</span>
-                <span class="project-agents">? agents assigned</span>
             </div>
         </div>
 
-        <!-- Data Infrastructure -->
-        <div class="project-card">
-            <div class="project-header">
-                <div class="project-level zayin">Z</div>
-                <div class="project-id">ANAG-P-003</div>
-            </div>
-            <div class="project-name">データ基盤</div>
-            <div class="project-subtitle">Data Infrastructure</div>
-            <div class="project-desc">
-                研究データの収集・保存・分析基盤の構築と運用。
-            </div>
-            <div class="project-stats">
-                <div class="stat-item">
-                    <div class="stat-label">PROGRESS</div>
-                    <div class="stat-bar">
-                        <div class="stat-fill" style="width: 91%"></div>
-                    </div>
-                    <div class="stat-value">91%</div>
+        <div class="project-item classified">
+            <div class="project-code">ANAG-P-000</div>
+            <div class="project-main">
+                <div class="project-name">長寿研究</div>
+                <div class="project-subtitle">Longevity Research</div>
+                <div class="project-desc classified-text">
+                    Level 5 clearance required.
                 </div>
-                <div class="stat-item">
-                    <div class="stat-label">PRIORITY</div>
-                    <div class="stat-value priority-low">LOW</div>
-                </div>
-            </div>
-            <div class="project-footer">
-                <span class="project-status active">● ACTIVE</span>
-                <span class="project-agents">1 agent assigned</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Warning Box -->
-    <div class="warning-box">
-        <div class="warning-icon">⚠</div>
-        <div class="warning-content">
-            <div class="warning-title">NOTICE</div>
-            <div class="warning-text">
-                ALEPH級プロジェクトへのアクセスにはLevel 5クリアランスが必要です。
-                不正アクセスは即座に検知・記録されます。
             </div>
         </div>
     </div>
@@ -170,242 +68,61 @@ import AnagInstitutionalLayout from '../layouts/AnagInstitutionalLayout.astro';
         color: var(--text-secondary);
     }
 
-    /* Classification Legend */
-    .classification-legend {
-        background: var(--bg-darker);
-        border: 1px solid var(--border);
-        padding: 20px;
-        margin-bottom: 32px;
-    }
-
-    .legend-title {
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: var(--text-muted);
-        margin-bottom: 12px;
-    }
-
-    .legend-items {
+    /* Project List */
+    .project-list {
         display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    .legend-item {
+    .project-item {
         display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 11px;
-        color: var(--text-secondary);
+        gap: 24px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
     }
 
-    .level-mark {
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 10px;
+    .project-item:first-child {
+        padding-top: 0;
     }
 
-    .zayin .level-mark { background: #3b82f6; color: #fff; }
-    .teth .level-mark { background: #22c55e; color: #fff; }
-    .he .level-mark { background: #eab308; color: #000; }
-    .waw .level-mark { background: #a855f7; color: #fff; }
-    .aleph .level-mark { background: #ef4444; color: #fff; }
-
-    /* Project Grid */
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        margin-bottom: 32px;
+    .project-item.classified {
+        opacity: 0.7;
     }
 
-    @media (max-width: 768px) {
-        .project-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    /* Project Card */
-    .project-card {
-        background: var(--bg-darker);
-        border: 1px solid var(--border);
-        padding: 20px;
-    }
-
-    .project-card.classified {
-        border-color: var(--red);
-        background: linear-gradient(135deg, var(--bg-darker) 0%, rgba(160, 64, 64, 0.1) 100%);
-    }
-
-    .project-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 12px;
-    }
-
-    .project-level {
-        width: 28px;
-        height: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 12px;
-    }
-
-    .project-level.zayin { background: #3b82f6; color: #fff; }
-    .project-level.teth { background: #22c55e; color: #fff; }
-    .project-level.he { background: #eab308; color: #000; }
-    .project-level.waw { background: #a855f7; color: #fff; }
-    .project-level.aleph { background: #ef4444; color: #fff; }
-
-    .project-id {
+    .project-code {
         font-size: 11px;
         font-family: 'IBM Plex Mono', monospace;
         color: var(--text-muted);
+        width: 100px;
+        flex-shrink: 0;
+        padding-top: 2px;
+    }
+
+    .project-main {
+        flex: 1;
     }
 
     .project-name {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
         color: var(--text);
         margin-bottom: 2px;
     }
 
     .project-subtitle {
-        font-size: 11px;
+        font-size: 12px;
         color: var(--text-muted);
-        letter-spacing: 0.5px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
 
     .project-desc {
-        font-size: 13px;
+        font-size: 14px;
         color: var(--text-secondary);
-        margin-bottom: 16px;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 
-    .redacted {
-        background: var(--text-muted);
+    .classified-text {
+        font-style: italic;
         color: var(--text-muted);
-        user-select: none;
-    }
-
-    /* Stats */
-    .project-stats {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 16px;
-    }
-
-    .stat-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .stat-label {
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: var(--text-muted);
-        width: 70px;
-    }
-
-    .stat-bar {
-        flex: 1;
-        height: 6px;
-        background: var(--bg-light);
-        position: relative;
-    }
-
-    .stat-fill {
-        height: 100%;
-        background: var(--red);
-        transition: width 0.3s ease;
-    }
-
-    .classified-bar .stat-fill {
-        background: repeating-linear-gradient(
-            45deg,
-            var(--red),
-            var(--red) 4px,
-            transparent 4px,
-            transparent 8px
-        );
-    }
-
-    .stat-value {
-        font-size: 11px;
-        font-family: 'IBM Plex Mono', monospace;
-        color: var(--text-secondary);
-        width: 70px;
-        text-align: right;
-    }
-
-    .priority-low { color: #3b82f6; }
-    .priority-mid { color: #22c55e; }
-    .priority-high { color: #eab308; }
-    .priority-critical { color: #ef4444; }
-
-    /* Footer */
-    .project-footer {
-        display: flex;
-        justify-content: space-between;
-        font-size: 11px;
-        padding-top: 12px;
-        border-top: 1px solid var(--border);
-    }
-
-    .project-status {
-        color: var(--text-muted);
-    }
-
-    .project-status.active {
-        color: #22c55e;
-    }
-
-    .project-status.classified-status {
-        color: var(--red);
-    }
-
-    .project-agents {
-        color: var(--text-muted);
-    }
-
-    /* Warning Box */
-    .warning-box {
-        display: flex;
-        gap: 16px;
-        background: rgba(234, 179, 8, 0.1);
-        border: 1px solid rgba(234, 179, 8, 0.3);
-        padding: 16px 20px;
-    }
-
-    .warning-icon {
-        font-size: 20px;
-        color: #eab308;
-    }
-
-    .warning-title {
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: #eab308;
-        margin-bottom: 4px;
-    }
-
-    .warning-text {
-        font-size: 13px;
-        color: var(--text-secondary);
-        line-height: 1.6;
     }
 </style>

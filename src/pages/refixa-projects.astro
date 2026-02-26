@@ -1,0 +1,372 @@
+---
+import RefixaInstitutionalLayout from '../layouts/RefixaInstitutionalLayout.astro';
+---
+
+<RefixaInstitutionalLayout title="プロジェクト" section="プロジェクト">
+    <section class="intro">
+        <p class="lead">
+            現在進行中のプロジェクト一覧。各プロジェクトは進捗状況と優先度により管理される。
+        </p>
+    </section>
+
+    <!-- Status Legend -->
+    <div class="status-legend">
+        <div class="legend-title">STATUS CLASSIFICATION</div>
+        <div class="legend-items">
+            <div class="legend-item"><span class="status-dot active"></span> ACTIVE — 稼働中</div>
+            <div class="legend-item"><span class="status-dot pending"></span> PENDING — 待機</div>
+            <div class="legend-item"><span class="status-dot complete"></span> COMPLETE — 完了</div>
+        </div>
+    </div>
+
+    <h2>Active Projects</h2>
+
+    <div class="project-grid">
+        <!-- MAS -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-id">RF-PRJ-001</div>
+                <span class="project-badge active">ACTIVE</span>
+            </div>
+            <div class="project-name">MAS</div>
+            <div class="project-subtitle">Multi Agent System</div>
+            <div class="project-desc">
+                複数のエージェントを動作させ、自律の基盤を整えることで開発や研究に利用する。
+            </div>
+            <div class="project-stats">
+                <div class="stat-row">
+                    <span class="stat-label">PROGRESS</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 67%"></div>
+                    </div>
+                    <span class="stat-value">67%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">PRIORITY</span>
+                    <span class="stat-value priority high">HIGH</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">AGENTS</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 受託開発 -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-id">RF-PRJ-002</div>
+                <span class="project-badge active">ACTIVE</span>
+            </div>
+            <div class="project-name">受託開発</div>
+            <div class="project-subtitle">Contract Development</div>
+            <div class="project-desc">
+                外部クライアントからの技術支援・開発案件の受注と遂行。
+            </div>
+            <div class="project-stats">
+                <div class="stat-row">
+                    <span class="stat-label">PROGRESS</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 45%"></div>
+                    </div>
+                    <span class="stat-value">45%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">PRIORITY</span>
+                    <span class="stat-value priority medium">MEDIUM</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">AGENTS</span>
+                    <span class="stat-value">3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- インフラ -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-id">RF-PRJ-003</div>
+                <span class="project-badge active">ACTIVE</span>
+            </div>
+            <div class="project-name">基盤構築</div>
+            <div class="project-subtitle">Infrastructure</div>
+            <div class="project-desc">
+                組織全体のシステムインフラストラクチャの構築と運用。
+            </div>
+            <div class="project-stats">
+                <div class="stat-row">
+                    <span class="stat-label">PROGRESS</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 82%"></div>
+                    </div>
+                    <span class="stat-value">82%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">PRIORITY</span>
+                    <span class="stat-value priority low">LOW</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">AGENTS</span>
+                    <span class="stat-value">2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CycleTree -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-id">RF-PRJ-004</div>
+                <span class="project-badge pending">PENDING</span>
+            </div>
+            <div class="project-name">CycleTree UI</div>
+            <div class="project-subtitle">Management Dashboard</div>
+            <div class="project-desc">
+                エージェント管理ダッシュボードの設計と実装。
+            </div>
+            <div class="project-stats">
+                <div class="stat-row">
+                    <span class="stat-label">PROGRESS</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 23%"></div>
+                    </div>
+                    <span class="stat-value">23%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">PRIORITY</span>
+                    <span class="stat-value priority medium">MEDIUM</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">AGENTS</span>
+                    <span class="stat-value">1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>System Metrics</h2>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-label">TOTAL PROJECTS</div>
+            <div class="metric-value">4</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">ACTIVE</div>
+            <div class="metric-value highlight">3</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">AGENTS DEPLOYED</div>
+            <div class="metric-value">11</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">AVG PROGRESS</div>
+            <div class="metric-value">54%</div>
+        </div>
+    </div>
+</RefixaInstitutionalLayout>
+
+<style>
+    .intro {
+        margin-bottom: 24px;
+    }
+
+    .lead {
+        font-size: 15px;
+        color: var(--text-secondary);
+    }
+
+    /* Status Legend */
+    .status-legend {
+        background: var(--bg-darker);
+        border: 1px solid var(--border);
+        padding: 16px 20px;
+        margin-bottom: 32px;
+    }
+
+    .legend-title {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+    }
+
+    .legend-items {
+        display: flex;
+        gap: 24px;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        color: var(--text-secondary);
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .status-dot.active { background: var(--green); }
+    .status-dot.pending { background: var(--yellow); }
+    .status-dot.complete { background: var(--text-muted); }
+
+    /* Project Grid */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+        .project-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Project Card */
+    .project-card {
+        background: var(--bg-darker);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--purple);
+        padding: 20px;
+    }
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .project-id {
+        font-size: 11px;
+        font-family: 'IBM Plex Mono', monospace;
+        color: var(--text-muted);
+    }
+
+    .project-badge {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 3px 8px;
+        border-radius: 2px;
+    }
+
+    .project-badge.active {
+        background: rgba(74, 222, 128, 0.15);
+        color: var(--green);
+        border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+
+    .project-badge.pending {
+        background: rgba(250, 204, 21, 0.15);
+        color: var(--yellow);
+        border: 1px solid rgba(250, 204, 21, 0.3);
+    }
+
+    .project-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 2px;
+    }
+
+    .project-subtitle {
+        font-size: 11px;
+        color: var(--text-muted);
+        margin-bottom: 12px;
+    }
+
+    .project-desc {
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    /* Stats */
+    .project-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+    }
+
+    .stat-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .stat-label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-muted);
+        width: 70px;
+    }
+
+    .stat-bar {
+        flex: 1;
+        height: 6px;
+        background: var(--bg-light);
+    }
+
+    .stat-fill {
+        height: 100%;
+        background: var(--purple);
+    }
+
+    .stat-value {
+        font-size: 12px;
+        font-family: 'IBM Plex Mono', monospace;
+        color: var(--text-secondary);
+        width: 60px;
+        text-align: right;
+    }
+
+    .priority.high { color: var(--red); }
+    .priority.medium { color: var(--yellow); }
+    .priority.low { color: var(--green); }
+
+    /* Metrics Grid */
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .metric-card {
+        background: var(--bg-darker);
+        border: 1px solid var(--border);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .metric-label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+    }
+
+    .metric-value {
+        font-size: 28px;
+        font-weight: 700;
+        font-family: 'IBM Plex Mono', monospace;
+        color: var(--text);
+    }
+
+    .metric-value.highlight {
+        color: var(--purple-bright);
+    }
+</style>

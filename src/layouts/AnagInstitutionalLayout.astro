@@ -190,6 +190,9 @@ const sideNavItems = [
         --text-muted: #808080;
         --accent: #d0d0d0;
         --accent-hover: #ffffff;
+        --red: #a04040;
+        --red-bright: #c05050;
+        --red-dim: rgba(160, 64, 64, 0.2);
     }
 
     * {
@@ -307,7 +310,7 @@ const sideNavItems = [
     .logo-mark {
         width: 40px;
         height: 40px;
-        color: var(--accent);
+        color: var(--red);
     }
 
     .logo-text {
@@ -319,6 +322,7 @@ const sideNavItems = [
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 2px;
+        color: var(--red-bright);
     }
 
     .logo-full {
@@ -358,7 +362,7 @@ const sideNavItems = [
     }
 
     .nav-item:hover .nav-link {
-        border-bottom-color: var(--accent);
+        border-bottom-color: var(--red);
     }
 
     /* Mega Menu */
@@ -557,7 +561,7 @@ const sideNavItems = [
     .footer-logo {
         font-size: 14px;
         font-weight: 700;
-        color: var(--text);
+        color: var(--red);
         letter-spacing: 2px;
     }
 

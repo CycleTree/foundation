@@ -63,6 +63,9 @@ const sideNavItems = [
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Hazard Stripe -->
+    <div class="hazard-stripe"></div>
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-inner">
@@ -120,6 +123,9 @@ const sideNavItems = [
             </nav>
         </div>
     </header>
+
+    <!-- Hazard Stripe -->
+    <div class="hazard-stripe"></div>
 
     <!-- Page Header -->
     <div class="page-header">
@@ -225,8 +231,25 @@ const sideNavItems = [
         font-weight: 700;
         color: var(--text);
         margin: 40px 0 20px;
-        padding-bottom: 12px;
+        padding: 12px 0;
         border-bottom: 1px solid var(--border);
+        position: relative;
+    }
+
+    h2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: repeating-linear-gradient(
+            -45deg,
+            var(--red) 0px,
+            var(--red) 4px,
+            var(--bg-darkest) 4px,
+            var(--bg-darkest) 8px
+        );
     }
 
     h3 {
@@ -258,6 +281,18 @@ const sideNavItems = [
 </style>
 
 <style>
+    /* Hazard Stripe */
+    .hazard-stripe {
+        height: 4px;
+        background: repeating-linear-gradient(
+            -45deg,
+            var(--red) 0px,
+            var(--red) 8px,
+            var(--bg-darkest) 8px,
+            var(--bg-darkest) 16px
+        );
+    }
+
     /* Top Bar */
     .top-bar {
         background: var(--bg-darkest);

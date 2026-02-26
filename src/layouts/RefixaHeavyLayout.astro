@@ -14,6 +14,12 @@ const {
     classification = 'INTERNAL',
     revision = '001'
 } = Astro.props;
+
+const navigation = [
+    { label: 'RFについて', href: '/refixa' },
+    { label: 'システム', href: '/refixa-systems' },
+    { label: 'プロジェクト', href: '/refixa-projects' },
+];
 ---
 
 <!DOCTYPE html>
@@ -54,6 +60,11 @@ const {
                         <span class="org-division">ENGINEERING DIVISION</span>
                     </div>
                 </div>
+                <nav class="header-nav">
+                    {navigation.map((item) => (
+                        <a href={item.href} class="nav-link">{item.label}</a>
+                    ))}
+                </nav>
                 <div class="header-right">
                     <div class="status-block">
                         <span class="status-label">STATUS</span>
@@ -349,6 +360,25 @@ const {
     .header-right {
         display: flex;
         align-items: center;
+    }
+
+    /* Header Nav */
+    .header-nav {
+        display: flex;
+        gap: 8px;
+    }
+
+    .header-nav .nav-link {
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: var(--text-secondary);
+        padding: 8px 16px;
+        transition: all 0.15s;
+    }
+
+    .header-nav .nav-link:hover {
+        color: var(--text-primary);
+        background: var(--bg-element);
     }
 
     .status-block {

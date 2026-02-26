@@ -185,20 +185,20 @@ const sideNavItems = [
 
 <style is:global>
     :root {
-        --bg: #2d2d2d;
-        --bg-darker: #252525;
-        --bg-darkest: #1a1a1a;
-        --bg-light: #3a3a3a;
-        --border: #404040;
-        --border-light: #4a4a4a;
-        --text: #e8e8e8;
-        --text-secondary: #b0b0b0;
-        --text-muted: #808080;
-        --accent: #d0d0d0;
+        --bg: #1e1e1e;
+        --bg-darker: #161616;
+        --bg-darkest: #0e0e0e;
+        --bg-light: #2a2a2a;
+        --border: #333333;
+        --border-light: #404040;
+        --text: #e0e0e0;
+        --text-secondary: #a0a0a0;
+        --text-muted: #666666;
+        --accent: #c0c0c0;
         --accent-hover: #ffffff;
-        --red: #a04040;
-        --red-bright: #c05050;
-        --red-dim: rgba(160, 64, 64, 0.2);
+        --red: #c43c3c;
+        --red-bright: #d45050;
+        --red-dim: rgba(196, 60, 60, 0.2);
     }
 
     * {
@@ -231,25 +231,8 @@ const sideNavItems = [
         font-weight: 700;
         color: var(--text);
         margin: 40px 0 20px;
-        padding: 12px 0;
+        padding-bottom: 12px;
         border-bottom: 1px solid var(--border);
-        position: relative;
-    }
-
-    h2::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 3px;
-        background: repeating-linear-gradient(
-            -45deg,
-            var(--red) 0px,
-            var(--red) 4px,
-            var(--bg-darkest) 4px,
-            var(--bg-darkest) 8px
-        );
     }
 
     h3 {

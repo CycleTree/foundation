@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Home">
+  <div class="hero">
+    <h1>mtdnot</h1>
+    <p class="tagline">死ぬのが怖くて、失うのが怖くて、それでも何かを作り続けている。</p>
+  </div>
+  
+  <section class="intro">
+    <p>
+      会津大学の学部生。三重県出身。<br>
+      防災・地震予測・AIエージェントシステムの研究開発をしています。
+    </p>
+  </section>
+  
+  <section class="orgs">
+    <h2>Organizations</h2>
+    <div class="org-grid">
+      <a href="/anag" class="org-card anag">
+        <h3>ANAG</h3>
+        <p>Anti-aging。探究と理論。死への恐怖から生まれた。</p>
+      </a>
+      <a href="/refixa" class="org-card refixa">
+        <h3>Refixa</h3>
+        <p>Re + Fix。実践と工学。喪失への抵抗。</p>
+      </a>
+      <a href="/frexida" class="org-card frexida">
+        <h3>Frexida</h3>
+        <p>友人と作った組織。ビジネスと成長。</p>
+      </a>
+    </div>
+  </section>
+  
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>EPS</strong> — Earthquake Prediction System / 地震予測システム</li>
+      <li><strong>MAS</strong> — Multi Agent System / マルチエージェント基盤</li>
+      <li><strong>電離圏研究</strong> — 地震準備過程と電子密度遷移の研究</li>
+    </ul>
+  </section>
+  
+  <section class="links">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://github.com/mtdnot">GitHub</a></li>
+      <li><a href="https://x.com/mtdnot">X (Twitter)</a></li>
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 64px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .tagline {
+    color: var(--text-dim);
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  .intro {
+    margin-bottom: 48px;
+    font-size: 16px;
+  }
+  
+  .org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .org-card {
+    display: block;
+    padding: 24px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  .org-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  
+  .org-card h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+  
+  .org-card p {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .org-card.anag { border-left: 3px solid #8bc34a; }
+  .org-card.refixa { border-left: 3px solid #ff7043; }
+  .org-card.frexida { border-left: 3px solid #29b6f6; }
+  
+  section {
+    margin-bottom: 48px;
+  }
+</style>

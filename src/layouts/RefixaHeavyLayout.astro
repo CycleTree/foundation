@@ -121,10 +121,7 @@ const navigation = [
             </footer>
         </div>
 
-        <!-- 右構造線 -->
-        <div class="structure-right">
-            <div class="structure-line"></div>
-        </div>
+<!-- 右構造線削除 -->
     </div>
 </body>
 </html>
@@ -177,20 +174,24 @@ const navigation = [
         letter-spacing: 3px;
         text-transform: uppercase;
         margin: 40px 0 16px;
-        padding: 20px 0 8px;
-        border-bottom: 1px solid var(--border);
+        padding: 12px 16px 12px 0;
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
     }
 
     h2::before {
         content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
+        flex-shrink: 0;
         width: 200px;
-        height: 16px;
-        background-image: url('/circuit-small.svg');
+        height: 40px;
+        border-right: 2px solid var(--accent);
+        padding-right: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 40'%3E%3Cpath d='M0 20 H60 L80 10 H140 L160 20 H220 L240 10 H300' stroke='%238b5cf6' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3Cpath d='M0 28 H40 L60 35 H120 L140 20 H200 L220 35 H280' stroke='%238b5cf6' stroke-width='1.5' fill='none' opacity='0.45'/%3E%3Cpath d='M0 12 H30 L50 20 H100' stroke='%238b5cf6' stroke-width='1.5' fill='none' opacity='0.35'/%3E%3Ccircle cx='80' cy='10' r='3' fill='%238b5cf6' opacity='0.7'/%3E%3Ccircle cx='160' cy='20' r='4' fill='%238b5cf6' opacity='0.7'/%3E%3Ccircle cx='240' cy='10' r='3' fill='%238b5cf6' opacity='0.6'/%3E%3Ccircle cx='60' cy='35' r='2.5' fill='%238b5cf6' opacity='0.5'/%3E%3Ccircle cx='140' cy='20' r='3' fill='%238b5cf6' opacity='0.6'/%3E%3Ccircle cx='220' cy='35' r='2.5' fill='%238b5cf6' opacity='0.5'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
+        background-position: left center;
         background-size: contain;
     }
 
@@ -311,7 +312,6 @@ const navigation = [
         flex: 1;
         display: flex;
         flex-direction: column;
-        max-width: 900px;
     }
 
     /* ヘッダーバー */
@@ -476,7 +476,7 @@ const navigation = [
     }
 
     .content-body {
-        max-width: 640px;
+        /* フル幅 */
     }
 
     /* フッターバー */

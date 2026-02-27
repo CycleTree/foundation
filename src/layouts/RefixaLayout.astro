@@ -123,8 +123,12 @@ const { title, description = 'REFIXA Technical Documentation', docId, classifica
         letter-spacing: 2px;
         text-transform: uppercase;
         margin: 32px 0 12px;
-        padding-bottom: 8px;
-        border-bottom: 1px solid var(--border);
+        padding: 12px 16px;
+        position: relative;
+        background: 
+            linear-gradient(to right, var(--bg-secondary) 0%, transparent 100%),
+            url('/circuit-header.png') right center / auto 100% no-repeat;
+        border-left: 3px solid var(--accent);
     }
 
     h3 {

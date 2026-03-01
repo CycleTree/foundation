@@ -1,88 +1,264 @@
 ---
-import AnagLayout from '../layouts/AnagLayout.astro';
+import AnagInstitutionalLayout from '../layouts/AnagInstitutionalLayout.astro';
 ---
 
-<AnagLayout 
-    title="ANAG Overview"
-    itemNumber="ANAG-001"
-    objectClass="THAUMIEL"
-    clearanceLevel={4}
->
-    <h2>Special Containment Procedures</h2>
-    <p>
-        ANAG Foundation operates as a decentralized research collective focused on 
-        <strong>anti-aging</strong> and <strong>mortality transcendence</strong> research.
-        All personnel must maintain Level 3+ clearance for database access.
-    </p>
-    
-    <div class="warning-box">
-        <strong>NOTICE:</strong> Research findings are classified. 
-        Unauthorized disclosure will result in immediate termination of access privileges.
-    </div>
+<AnagInstitutionalLayout title="ANAGについて" section="概要">
+    <section class="intro">
+        <p class="lead">
+            ANAGは「Anti-aging」を語源とする研究組織である。
+            死の克服と未知の探究を通じて、人類の限界に挑む。
+        </p>
+    </section>
 
-    <h2>Description</h2>
+    <h2 id="mission">設立理念</h2>
     <p>
-        ANAGは「Anti-aging」を語源とする研究組織である。
         不老不死を目指す——そう聞くと馬鹿げて聞こえるかもしれない。
     </p>
     <p>
         しかし本当の理由はもっと単純で、もっと切実だ。
     </p>
     <blockquote>
-        大切な人が死ぬのが怖い。自分が死ぬのが怖い。<br>
-        だから、不老不死を夢見た。
+        「大切な人が死ぬのが怖い。自分が死ぬのが怖い。
+        だから、不老不死を夢見た。」
     </blockquote>
     <p>
         探究心に身を任せて、それこそが幸せであると定義付けしようとした。
         死への恐怖を、知への渇望に変換する試み。
     </p>
 
-    <h2>Mission Objectives</h2>
-    <ul>
-        <li><strong>Primary:</strong> 死の克服に関する基礎研究</li>
-        <li><strong>Secondary:</strong> 電離圏電子密度の遷移研究</li>
-        <li><strong>Tertiary:</strong> EPS (Earthquake Prediction System) 開発</li>
-    </ul>
-
-    <h2>Research Areas</h2>
-    <h3>Project EPS</h3>
-    <p>
-        地震準備過程は観測可能な物理的・統計的痕跡を残すか。
-        電離圏の異常と地震発生の相関を研究する。
-    </p>
-    <p>
-        南海トラフ大震災の前兆を捉えることが当面の目標。
-        <span class="redacted">████████</span>の被害を最小限にするため。
-    </p>
-
-    <h3>Longevity Research</h3>
-    <p>
-        詳細は Level 5 クリアランス保持者のみアクセス可能。
-    </p>
-    <p>
-        現在のステータス: <span class="redacted">██████████</span>
-    </p>
-
-    <h2>Organizational Structure</h2>
-    <div class="info-box">
-        <p><strong>Parent Organization:</strong> CycleTree</p>
-        <p><strong>Sister Organization:</strong> <a href="/refixa">Refixa (RF)</a> — 実践・工学部門</p>
-        <p><strong>Relationship:</strong> 協力関係（価値観の矛盾により独立）</p>
+    <h2>ミッション</h2>
+    <div class="mission-grid">
+        <div class="mission-item">
+            <div class="mission-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+            </div>
+            <h3>Primary</h3>
+            <p>死の克服に関する基礎研究</p>
+        </div>
+        <div class="mission-item">
+            <div class="mission-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <h3>Secondary</h3>
+            <p>電離圏電子密度の遷移研究</p>
+        </div>
+        <div class="mission-item">
+            <div class="mission-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+            </div>
+            <h3>Tertiary</h3>
+            <p>EPS（地震予測システム）開発</p>
+        </div>
     </div>
 
-    <h2>Personnel</h2>
-    <ul>
-        <li><strong>nix/pm-1</strong> — Project Manager</li>
-        <li><strong>angis</strong> — Research Lead</li>
-        <li><strong>pi</strong> — Principal Investigator</li>
-        <li><strong>data-eng</strong> — Data Engineering</li>
-        <li><strong>impl</strong> — Implementation</li>
-        <li><strong>valid</strong> — Validation</li>
-    </ul>
+    <h2 id="structure">組織構造</h2>
+    <div class="org-table">
+        <div class="org-row org-header">
+            <div class="org-cell">ID</div>
+            <div class="org-cell">ロール</div>
+            <div class="org-cell">担当領域</div>
+        </div>
+        <div class="org-row">
+            <div class="org-cell"><code>nix/pm-1</code></div>
+            <div class="org-cell">Project Manager</div>
+            <div class="org-cell">プロジェクト統括</div>
+        </div>
+        <div class="org-row">
+            <div class="org-cell"><code>angis</code></div>
+            <div class="org-cell">Research Lead</div>
+            <div class="org-cell">研究主任</div>
+        </div>
+        <div class="org-row">
+            <div class="org-cell"><code>pi</code></div>
+            <div class="org-cell">Principal Investigator</div>
+            <div class="org-cell">主任研究員</div>
+        </div>
+        <div class="org-row">
+            <div class="org-cell"><code>data-eng</code></div>
+            <div class="org-cell">Data Engineering</div>
+            <div class="org-cell">データ基盤</div>
+        </div>
+        <div class="org-row">
+            <div class="org-cell"><code>impl</code></div>
+            <div class="org-cell">Implementation</div>
+            <div class="org-cell">実装</div>
+        </div>
+        <div class="org-row">
+            <div class="org-cell"><code>valid</code></div>
+            <div class="org-cell">Validation</div>
+            <div class="org-cell">検証</div>
+        </div>
+    </div>
 
-    <h2>Addendum ANAG-001-A</h2>
-    <blockquote>
-        「自分の物語に没入するのが楽しい。妄想で終わるはずが、今は現実に向けて動いてる」<br>
-        — Founder, <span class="redacted">████</span>
-    </blockquote>
-</AnagLayout>
+    <h2 id="related">関連組織</h2>
+    <div class="related-orgs">
+        <a href="/refixa" class="related-card">
+            <div class="related-name">Refixa (RF)</div>
+            <div class="related-desc">実践・工学部門。喪失への抵抗を価値観とする。</div>
+            <span class="related-arrow">›</span>
+        </a>
+        <a href="/frexida" class="related-card">
+            <div class="related-name">Frexida</div>
+            <div class="related-desc">ビジネス部門。変化し続けることを変化しない。</div>
+            <span class="related-arrow">›</span>
+        </a>
+    </div>
+</AnagInstitutionalLayout>
+
+<style>
+    .intro {
+        margin-bottom: 32px;
+    }
+
+    .lead {
+        font-size: 16px;
+        color: var(--text);
+        line-height: 1.9;
+    }
+
+    blockquote {
+        background: var(--bg-darker);
+        border-left: 3px solid var(--red);
+        padding: 20px 24px;
+        margin: 24px 0;
+        font-style: italic;
+        color: var(--text-secondary);
+    }
+
+    /* Mission Grid */
+    .mission-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 24px 0;
+    }
+
+    .mission-item {
+        background: var(--bg-darker);
+        border: 1px solid var(--border);
+        padding: 24px;
+        text-align: center;
+    }
+
+    .mission-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 16px;
+        color: var(--red);
+    }
+
+    .mission-item h3 {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-muted);
+        margin: 0 0 8px;
+    }
+
+    .mission-item p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Org Table */
+    .org-table {
+        border: 1px solid var(--border);
+        margin: 24px 0;
+    }
+
+    .org-row {
+        display: grid;
+        grid-template-columns: 120px 180px 1fr;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .org-row:last-child {
+        border-bottom: none;
+    }
+
+    .org-header {
+        background: var(--bg-darker);
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .org-cell {
+        padding: 12px 16px;
+        border-right: 1px solid var(--border);
+    }
+
+    .org-cell:last-child {
+        border-right: none;
+    }
+
+    code {
+        font-family: 'IBM Plex Mono', monospace;
+        background: var(--bg-light);
+        padding: 2px 6px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
+    /* Related Orgs */
+    .related-orgs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 24px 0;
+    }
+
+    .related-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 24px;
+        background: var(--bg-darker);
+        border: 1px solid var(--border);
+        transition: all 0.15s;
+    }
+
+    .related-card:hover {
+        background: var(--bg-light);
+        border-color: var(--border-light);
+    }
+
+    .related-name {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text);
+        min-width: 120px;
+    }
+
+    .related-desc {
+        flex: 1;
+        font-size: 13px;
+        color: var(--text-muted);
+    }
+
+    .related-arrow {
+        font-size: 20px;
+        color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+        .mission-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .org-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

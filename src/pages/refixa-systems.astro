@@ -13,40 +13,64 @@ import RefixaHeavyLayout from '../layouts/RefixaHeavyLayout.astro';
         RF Engineering Division operates a distributed multi-agent infrastructure 
         designed for autonomous task execution and system coordination.
     </p>
+    <p>
+        <strong>目的:</strong> 人間の作業を意思決定のみにする。研究・開発の量産体制構築。
+    </p>
+
+    <h3>factory基本装置</h3>
+    <ul>
+        <li><strong>思考装置</strong> — Claude Code + Playwright MCP（ChatGPTにBrowserless経由接続）</li>
+        <li><strong>輸送/管理装置</strong> — n8n（データフロー管理、エージェント配置）</li>
+        <li><strong>実装装置</strong> — Claude Code（仕様書→実装）</li>
+        <li><strong>通信</strong> — OpenClaw + Slack/Discord連携</li>
+    </ul>
 
     <h3>Core Components</h3>
     <ul>
-        <li><strong>Gateway</strong> — Central coordination node</li>
+        <li><strong>Gateway</strong> — Central coordination node (OpenClaw)</li>
         <li><strong>Agent Pool</strong> — Distributed processing units</li>
         <li><strong>Memory Store</strong> — Persistent state management</li>
-        <li><strong>Task Queue</strong> — Asynchronous job scheduler</li>
+        <li><strong>Task Queue</strong> — Asynchronous job scheduler (n8n)</li>
     </ul>
+
+    <h3>フェーズ</h3>
+    <ol>
+        <li>基盤構築（工学 > 学術 > ビジネス）</li>
+        <li>論文化</li>
+        <li>実装/展開</li>
+    </ol>
 
     <h2>Agent Registry</h2>
     
     <div class="data-block">
         <div class="data-row">
             <span class="data-id">RF-AGT-001</span>
-            <span class="data-name">red</span>
-            <span class="data-role">System Coordinator</span>
+            <span class="data-name">fixus</span>
+            <span class="data-role">Factory Operations (Slack #factory)</span>
             <span class="data-status online">ACTIVE</span>
         </div>
         <div class="data-row">
             <span class="data-id">RF-AGT-002</span>
-            <span class="data-name">techlead</span>
-            <span class="data-role">Technical Lead</span>
+            <span class="data-name">leith18</span>
+            <span class="data-role">Infrastructure (Discord #rc-coffee)</span>
             <span class="data-status online">ACTIVE</span>
         </div>
         <div class="data-row">
-            <span class="data-id">RF-AGT-003</span>
-            <span class="data-name">leith</span>
-            <span class="data-role">Architect</span>
+            <span class="data-id">AN-AGT-001</span>
+            <span class="data-name">angis</span>
+            <span class="data-role">Research Lead (Slack #eps)</span>
             <span class="data-status online">ACTIVE</span>
         </div>
         <div class="data-row">
-            <span class="data-id">RF-AGT-004</span>
-            <span class="data-name">impl</span>
-            <span class="data-role">Implementation</span>
+            <span class="data-id">AN-AGT-002</span>
+            <span class="data-name">anagi</span>
+            <span class="data-role">Research Coordinator (Discord #rc-coffee)</span>
+            <span class="data-status online">ACTIVE</span>
+        </div>
+        <div class="data-row">
+            <span class="data-id">CT-AGT-001</span>
+            <span class="data-name">natus</span>
+            <span class="data-role">Reserved</span>
             <span class="data-status standby">STANDBY</span>
         </div>
     </div>

@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sitemap - All Pages">
+  <main>
+    <h1>全ページ一覧</h1>
+    <p>foundationサイトの全URLリスト</p>
+    
+    <ul class="page-list">
+      <li><a href="/">/</a> - index (トップページ)</li>
+      <li><a href="/anag">/anag</a> - ANAG</li>
+      <li><a href="/anag-about">/anag-about</a> - ANAG About</li>
+      <li><a href="/anag-projects">/anag-projects</a> - ANAG Projects</li>
+      <li><a href="/frexida">/frexida</a> - Frexida</li>
+      <li><a href="/mtdnot">/mtdnot</a> - mtdnot</li>
+      <li><a href="/refixa">/refixa</a> - Refixa</li>
+      <li><a href="/refixa-projects">/refixa-projects</a> - Refixa Projects</li>
+      <li><a href="/refixa-systems">/refixa-systems</a> - Refixa Systems</li>
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .page-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .page-list a {
+    color: #0066cc;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.1rem;
+  }
+  
+  .page-list a:hover {
+    text-decoration: underline;
+  }
+</style>

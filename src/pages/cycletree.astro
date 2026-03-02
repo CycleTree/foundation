@@ -19,6 +19,16 @@ import Base from '../layouts/Base.astro';
             人間の作業を意思決定のみにし、それ以外はAIエージェントに委譲する。
         </blockquote>
 
+        <h2>組織図</h2>
+        <div class="org-chart">
+            <img src="/images/org-chart.png" alt="CycleTree 組織図" />
+        </div>
+        <p class="caption">
+            CycleTree の組織構造と外部連携。
+            mtdnot を頂点に、anagi が中間管理として各部門（ANAG, Refixa, Personal）を統括。
+            外部組織として Frexida（連携）と Seirin-Company（受託）が接続。
+        </p>
+
         <h2>組織間関係</h2>
         <div class="relation-map">
             <div class="relation-item">
@@ -31,7 +41,17 @@ import Base from '../layouts/Base.astro';
                 <strong>Refixa</strong> → 実践・工学部門（factory運用、自動化基盤）
             </div>
             <div class="relation-item">
-                <strong>Frexida</strong> → ビジネス部門（OSS、受託）
+                <strong>Personal</strong> → 影武者（natsu）、人間的な仕事の代行
+            </div>
+        </div>
+
+        <h3>外部連携</h3>
+        <div class="relation-map">
+            <div class="relation-item external">
+                <strong>Frexida</strong> → ビジネス連携（OSS、共同開発）
+            </div>
+            <div class="relation-item external">
+                <strong>Seirin-Company</strong> → 受託業務
             </div>
         </div>
 
@@ -47,34 +67,34 @@ import Base from '../layouts/Base.astro';
             </thead>
             <tbody>
                 <tr>
+                    <td><code>anagi</code></td>
+                    <td>CycleTree</td>
+                    <td>Discord #z_natsu, #rc-coffee</td>
+                    <td>中間管理、全体調整</td>
+                </tr>
+                <tr>
                     <td><code>angis</code></td>
                     <td>ANAG</td>
-                    <td>Slack #eps</td>
+                    <td>Slack #eps, Discord #angis</td>
                     <td>eps研究、電離圏解析</td>
                 </tr>
                 <tr>
                     <td><code>fixus</code></td>
                     <td>Refixa</td>
-                    <td>Slack #factory</td>
+                    <td>Slack #factory, Discord #fixus</td>
                     <td>自動化基盤、factory運用</td>
                 </tr>
                 <tr>
-                    <td><code>anagi</code></td>
-                    <td>ANAG</td>
+                    <td><code>natsu</code></td>
+                    <td>Personal</td>
                     <td>Discord #rc-coffee</td>
-                    <td>研究全般、コーディネート</td>
+                    <td>mtdnotの影武者、人間的タスク</td>
                 </tr>
                 <tr>
                     <td><code>leith18</code></td>
                     <td>CycleTree</td>
                     <td>Discord #rc-coffee</td>
                     <td>インフラ、システム管理</td>
-                </tr>
-                <tr>
-                    <td><code>natus</code></td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>（予備）</td>
                 </tr>
             </tbody>
         </table>
@@ -104,8 +124,8 @@ import Base from '../layouts/Base.astro';
             <div class="tech-category">
                 <h3>通信</h3>
                 <ul>
-                    <li>Slack（factory, core）</li>
-                    <li>Discord（rc-coffee）</li>
+                    <li>Slack（機密情報）</li>
+                    <li>Discord（公開情報）</li>
                 </ul>
             </div>
         </div>
@@ -123,22 +143,22 @@ import Base from '../layouts/Base.astro';
                 <tr>
                     <td>Slack</td>
                     <td>#eps</td>
-                    <td>電離圏研究、angis担当</td>
+                    <td>電離圏研究、angis担当（機密）</td>
                 </tr>
                 <tr>
                     <td>Slack</td>
                     <td>#factory</td>
-                    <td>自動化基盤、fixus担当</td>
-                </tr>
-                <tr>
-                    <td>Slack</td>
-                    <td>#core</td>
-                    <td>コア開発</td>
+                    <td>自動化基盤、fixus担当（機密）</td>
                 </tr>
                 <tr>
                     <td>Discord</td>
                     <td>#rc-coffee</td>
-                    <td>全体調整、雑談</td>
+                    <td>全体調整、方針決定</td>
+                </tr>
+                <tr>
+                    <td>Discord</td>
+                    <td>#z_natsu</td>
+                    <td>mtdnot + anagi 作業チャンネル</td>
                 </tr>
             </tbody>
         </table>
@@ -146,11 +166,11 @@ import Base from '../layouts/Base.astro';
         <h2>意思決定フロー</h2>
         <ol class="decision-flow">
             <li>エージェントが提案・実装</li>
-            <li>ナツ（mtdnot）が承認</li>
-            <li>エスカレーション: 重大判断はナツに委譲</li>
+            <li>anagi が調整・集約</li>
+            <li>mtdnot が最終承認</li>
         </ol>
         <p>
-            <strong>原則:</strong> エージェントは自律的に作業し、意思決定のみ人間に委ねる。
+            <strong>原則:</strong> エージェントは自律的に作業し、哲学的・根源的な判断のみ mtdnot に委ねる。
         </p>
 
         <h2>リポジトリ構造</h2>
@@ -169,19 +189,19 @@ import Base from '../layouts/Base.astro';
                     <td>このサイト（組織情報）</td>
                 </tr>
                 <tr>
-                    <td><code>Frexida/mas</code></td>
-                    <td>Frexida</td>
-                    <td>MAS研究OSS</td>
-                </tr>
-                <tr>
-                    <td><code>eps, eps2, eps3</code></td>
+                    <td><code>CycleTree/eps</code></td>
                     <td>ANAG</td>
                     <td>電離圏研究</td>
                 </tr>
                 <tr>
-                    <td><code>eps-ionosphere</code></td>
-                    <td>ANAG</td>
-                    <td>電離圏トモグラフィ</td>
+                    <td><code>CycleTree/factory</code></td>
+                    <td>Refixa</td>
+                    <td>自動化基盤</td>
+                </tr>
+                <tr>
+                    <td><code>mtdnot/icall</code></td>
+                    <td>Refixa</td>
+                    <td>AI電話システム (@refixa/icall)</td>
                 </tr>
             </tbody>
         </table>
@@ -211,6 +231,7 @@ import Base from '../layouts/Base.astro';
     h3 {
         font-size: 14px;
         margin-bottom: 8px;
+        margin-top: 24px;
         color: var(--text-muted);
     }
 
@@ -231,6 +252,25 @@ import Base from '../layouts/Base.astro';
         font-style: italic;
     }
 
+    .org-chart {
+        margin: 24px 0;
+        text-align: center;
+    }
+
+    .org-chart img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+    }
+
+    .caption {
+        font-size: 14px;
+        color: var(--text-muted);
+        text-align: center;
+        margin-top: 8px;
+    }
+
     .relation-map {
         display: flex;
         flex-direction: column;
@@ -242,6 +282,11 @@ import Base from '../layouts/Base.astro';
         padding: 12px 16px;
         background: var(--bg-darker);
         border-left: 3px solid var(--border);
+    }
+
+    .relation-item.external {
+        border-left-color: var(--accent, #4a9);
+        border-left-style: dashed;
     }
 
     table {

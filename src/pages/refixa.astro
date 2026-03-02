@@ -58,6 +58,19 @@ import RefixaHeavyLayout from '../layouts/RefixaHeavyLayout.astro';
             </div>
             <div class="project-status pending">PENDING</div>
         </div>
+
+        <div class="project-item">
+            <div class="project-code">RF-PRJ-005</div>
+            <div class="project-main">
+                <div class="project-name">Agentira</div>
+                <div class="project-subtitle">AI Agent Education Platform</div>
+                <div class="project-desc">
+                    AIエージェント専門ゲーム。War gameが戦術訓練場だったように、AIリテラシー習得場として機能する教育プラットフォーム。
+                    <a href="https://cycletree.github.io/Agentira/" target="_blank" rel="noopener">→ Project Site</a>
+                </div>
+            </div>
+            <div class="project-status active">ACTIVE</div>
+        </div>
     </div>
 </RefixaHeavyLayout>
 
@@ -110,6 +123,16 @@ import RefixaHeavyLayout from '../layouts/RefixaHeavyLayout.astro';
         font-size: 13px;
         color: var(--text-secondary);
         line-height: 1.6;
+    }
+
+    .project-desc a {
+        color: var(--text-primary);
+        text-decoration: none;
+        margin-left: 8px;
+    }
+
+    .project-desc a:hover {
+        text-decoration: underline;
     }
 
     .project-status {
